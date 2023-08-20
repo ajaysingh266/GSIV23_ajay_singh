@@ -9,10 +9,10 @@ const commonHeaders = {
   Authorization: "Bearer " + TMBD_TOKEN,
 };
 
-export const fetchDataWithToken = async (url, params) => {
+export const fetchDataWithToken = async (url: string, params?: string) => {
   try {
-    const { data } = await axios.get(BASE_URL + url, {
-      commonHeaders,
+    const { data } = await axios.get(BASE_URL + url + "?api_key=" + api_Key, {
+      headers: commonHeaders,
       params,
     });
     return data;
