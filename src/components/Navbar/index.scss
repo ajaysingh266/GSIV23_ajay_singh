@@ -1,0 +1,13 @@
+.navbarConatiner {
+  @apply flex justify-between items-center h-16;
+  padding: 1rem 1.5rem;
+  .inputWrapper {
+    @apply flex justify-center;
+  }
+  .homeIcon {
+    font-size: 1.5rem;
+  }
+  .inputClass {
+    @apply w-96 p-2;
+  }
+}
