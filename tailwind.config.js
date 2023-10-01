@@ -25,6 +25,15 @@ module.exports = {
         text: {
           DEFAULT: "#34373c",
         },
+        green: "#34A853",
+        amber: "#FBBC04",
+        red: "#CF2721",
+        blue: "#4285F4",
+        orange: "#F25C00",
+        orchid: "#AC69B0",
+        gray: "#4A4A4A",
+        lightGray: "#9B9B9B",
+        disbaled: "#DFDFDF",
         theme: {
           50: "#f8fafc",
           100: "#f1f5f9",

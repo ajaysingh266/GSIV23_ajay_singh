@@ -4,19 +4,15 @@ import "./index.scss";
 interface NavbarProps {}
 const Navbar: React.FC<NavbarProps> = () => {
   return (
-    <header className="navbarConatiner">
-      <div className="inputWrapper">
-        <AiOutlineSearch />
-        <input
-          className="inputClass"
-          type="text"
-          placeholder="Search for a movie .."
-        />
-      </div>
-      <nav>
+    <nav className="navbarConatiner">
+      <header className="inputWrapper">
+        <AiOutlineSearch className="outlineSearch" />
+        <input className="inputClass" type="text" placeholder="Search" />
+      </header>
+      <div className="home-icon-wrapper">
         <AiFillHome className="homeIcon" />
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 

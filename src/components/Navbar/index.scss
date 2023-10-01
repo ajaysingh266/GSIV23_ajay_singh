@@ -1,13 +1,20 @@
 .navbarConatiner {
-  @apply flex justify-between items-center h-16;
+  @apply sticky top-0 w-[100%] flex justify-between items-center h-20 shadow;
   padding: 1rem 1.5rem;
   .inputWrapper {
-    @apply flex justify-center;
+    @apply flex-1 flex justify-start items-center gap-2  justify-items-center bg-theme-100 px-4 py-1 rounded-lg;
+    .inputClass {
+      @apply p-2 bg-theme-100 outline-none text-xl font-600;
+    }
+    .outlineSearch {
+      color: var(--gray);
+      @apply text-xl;
+    }
   }
-  .homeIcon {
-    font-size: 1.5rem;
-  }
-  .inputClass {
-    @apply w-96 p-2;
+  .home-icon-wrapper {
+    @apply flex-1 flex justify-end;
+    .homeIcon {
+      @apply text-4xl text-black;
+    }
   }
 }
