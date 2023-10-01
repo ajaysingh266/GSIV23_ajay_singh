@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
-import { homeState } from "./initialState";
+import { movieState } from "./initialState";
 import rootReducer from "./reducers";
 import { persistReducer, persistStore } from "redux-persist";
 
@@ -24,7 +24,7 @@ const createStore = (preloadedState: object) => {
 };
 
 export const store = createStore({
-  home: homeState,
+  movie: movieState,
 });
 
 export const persistor = persistStore(store);

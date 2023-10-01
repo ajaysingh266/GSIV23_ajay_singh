@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import homeSlice from "./homeSlice";
+import movieSlice from "./homeSlice";
 
 const rootReducer = combineReducers({
-  home: homeSlice,
+  movie: movieSlice,
 });
 
 export default rootReducer;

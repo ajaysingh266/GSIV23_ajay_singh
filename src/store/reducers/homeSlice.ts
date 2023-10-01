@@ -1,17 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { homeState } from "../initialState";
+import { movieState } from "../initialState";
 
 export const homeReducer = createSlice({
-  name: "home",
-  initialState: homeState,
+  name: "movie",
+  initialState: movieState,
   reducers: {
-    getApiConfiguration: (state, action) => {
-      state.url = action.payload;
+    getMovies: (state: any, action: any) => {
+      state.data = action.payload.data;
+      state.total = action.payload.total_pages;
+      state.page = action.payload.page;
     },
-    getGenres: (state, action) => {
-      state.genres = action.payload;
+    updateMovies: (state, action) => {
+      state.data = [...state.data, ...action.payload.data];
+      state.total = action.payload.total_pages;
+      state.page = action.payload.page + 1;
     },
   },
 });
-export const { getApiConfiguration, getGenres } = homeReducer.actions;
+export const { getMovies, updateMovies } = homeReducer.actions;
 export default homeReducer.reducer;
